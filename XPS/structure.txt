@@ -1,0 +1,106 @@
+<!DOCTYPE SpecsLabSchedule>
+<Experiment Version="1.1">
+<Schedule ID="1" Name="2017-12-05_P016_Sb">
+<DevicesDeactivation>
+<State NodeDeactivation="AllStandby"><DeactivationParameters/></State></DevicesDeactivation>
+<XPS ID="2" Name="XPS">
+
+<DeviceCommands>
+	<DeviceCommand DeviceType="PhoibosND" Name="Set Parameters" UniqueDeviceName="PhoibosND">
+		<Settings NotifyUserOnDeviceSetup="false"/>
+		<CommandParameters/>
+	</DeviceCommand>
+	
+	<DeviceCommand DeviceType="XRC1000" Name="Operate" UniqueDeviceName="XRC1000">
+		<Settings NotifyUserOnDeviceSetup="false"/>
+		<CommandParameters>
+			<Parameter name="operating_mode" type="enum" values="off|cooling|standby|hvon|operate">operate</Parameter>
+			<Parameter name="anode" type="enum" values="Al|Mg">Al</Parameter><Parameter name="uanode" type="double">12500</Parameter>
+			<Parameter name="iemission" type="double">0.02</Parameter><Parameter name="DeviceExcitationEnergy" type="double">1486.6099999999999</Parameter>
+		</CommandParameters>
+	</DeviceCommand>
+</DeviceCommands>
+
+<SpectrumGroup ID="3" Name="P016_Sb">
+		<GroupSettings AutoCompact="None" ProcessingOrder="Consecutive"/>
+		<CommonSpectrumSettings>
+			<ScanMode Name="FixedAnalyzerTransmission"/>
+			<SlitInfo Entrance="5:7x20" Exit="B:open"/>
+			<Lens VoltageRange="3.5kV"/>
+			<EnergyChannelCalibration Dir="C:/Users/Public/Documents/SpecsLab Prodigy/Database/DatasetCalib1D" File="phoibos100-CCD"/>
+			<Transmission File="./Default\Default.tf"/>
+			<Iris Diameter="50"/>
+		</CommonSpectrumSettings>
+		<DataProcessing/>
+		
+	<Spectrum ID="4" Name="Sb 3d"> <Comment></Comment><UserSettings AutoActivation="false" Overwrite="false"/><FixedAnalyzerTransmissionSettings DwellTime="1"   Ebin="545" Eexc="1486.6099999999999" End="520" Epass="10" LensMode="MediumMagnification" NumScans="1" NumValues="251"/> <ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization=""><Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(0,160,0)" style="SOLID_LINE" width="1"/></Plot><Plot sumChannels="false" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(0,136,0)" style="SOLID_LINE" width="1"/></Plot></ViewSettings><ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/></Spectrum>
+	<Spectrum ID="5" Name="Survey"><Comment></Comment><UserSettings AutoActivation="false" Overwrite="false"/><FixedAnalyzerTransmissionSettings DwellTime="0.5" Ebin="600" Eexc="1486.6099999999999" End="-5"  Epass="20" LensMode="MediumMagnification" NumScans="1" NumValues="1211"/><ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization=""><Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(0,0,220)" style="SOLID_LINE" width="1"/></Plot></ViewSettings><ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/></Spectrum>
+	<Spectrum ID="6" Name="Cs3d">  <Comment></Comment><UserSettings AutoActivation="false" Overwrite="false"/><FixedAnalyzerTransmissionSettings DwellTime="1"   Ebin="750" Eexc="1486.6099999999999" End="720" Epass="10" LensMode="MediumMagnification" NumScans="1" NumValues="301"/> <ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization=""><Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(255,135,0)" style="SOLID_LINE" width="1"/></Plot></ViewSettings><ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/></Spectrum>
+	<Spectrum ID="7" Name="K 2p">  <Comment></Comment><UserSettings AutoActivation="false" Overwrite="false"/><FixedAnalyzerTransmissionSettings DwellTime="1"   Ebin="300" Eexc="1486.6099999999999" End="290" Epass="10" LensMode="MediumMagnification" NumScans="1" NumValues="101"/> <ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization=""><Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(170,0,170)" style="SOLID_LINE" width="1"/></Plot></ViewSettings><ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/></Spectrum>
+	<Spectrum ID="8" Name="Mo 3d"> <Comment></Comment><UserSettings AutoActivation="false" Overwrite="false"/><FixedAnalyzerTransmissionSettings DwellTime="1"   Ebin="235" Eexc="1486.6099999999999" End="225" Epass="10" LensMode="MediumMagnification" NumScans="1" NumValues="101"/> <ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization=""><Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(255,0,0)" style="SOLID_LINE" width="1"/></Plot><Plot sumChannels="false" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(216,0,0)" style="SOLID_LINE" width="1"/></Plot></ViewSettings><ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/></Spectrum>
+	
+	<Spectrum ID="9" Name="C 1s">
+		<Comment></Comment>
+		<UserSettings AutoActivation="false" Overwrite="false"/>
+		<FixedAnalyzerTransmissionSettings DwellTime="1"   Ebin="290" Eexc="1486.6099999999999" End="280" Epass="10" LensMode="MediumMagnification" NumScans="1" NumValues="101"/>
+		<ViewSettings ConverterFlags="InterpolateCounts" ExtChannelForNormalization="">
+		<Plot sumChannels="true" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(0,160,0)" style="SOLID_LINE" width="1"/></Plot>
+		<Plot sumChannels="false" sumCurves="true"><Parameters><Parameter Flag="Sum" Key="Scan [Idx]"/></Parameters><Style color="RGBColor(0,136,0)" style="SOLID_LINE" width="1"/></Plot>
+		</ViewSettings>
+		<ExternalChannels/><DataProcessing ChannelMask="" ScanMask="" SpectrumShift="0"/>
+	</Spectrum>
+</SpectrumGroup>
+
+</XPS>
+</Schedule>
+</Experiment>
+
+
+### node data for a region group
+<Data>
+	<DetectorCalibration Analyzer="Phoibos" Dir="C:/Users/Public/Documents/SpecsLab Prodigy/Database/DatasetCalib1D" Directory="C:/Users/Public/Documents/SpecsLab Prodigy/Database/DatasetCalib1D" Name="phoibos100-CCD">
+		<Detector Gain="1" Position="-15.7896" Shift="-0.070956295110572637"/>
+		<Detector Gain="1" Position="-14.473800000000001" Shift="-0.064061514022880267"/>
+		<Detector Gain="1" Position="-13.157999999999998" Shift="-0.057020732434656551"/>
+		<Detector Gain="1" Position="-11.842199999999998" Shift="-0.049565780000035274"/>
+		<Detector Gain="1" Position="-10.526400000000001" Shift="-0.042824034721433465"/>
+		<Detector Gain="1" Position="-9.2105999999999995" Shift="-0.03592082428579875"/>
+		<Detector Gain="1" Position="-7.8948" Shift="-0.032277331289769763"/>
+		<Detector Gain="1" Position="-6.5789999999999988" Shift="-0.02348076685727335"/>
+		<Detector Gain="1" Position="-5.2632000000000003" Shift="-0.016846497749123654"/>
+		<Detector Gain="1" Position="-3.9474" Shift="-0.011033838182769267"/>
+		<Detector Gain="1" Position="-2.6316000000000002" Shift="-0.0044286652622375251"/>
+		<Detector Gain="1" Position="-1.3158000000000001" Shift="0.0021327821692478811"/>
+		<Detector Gain="1" Position="0" Shift="0.0075007299999999997"/>
+		<Detector Gain="1" Position="1.3158000000000001" Shift="0.014159536328328249"/>
+		<Detector Gain="1" Position="2.6316000000000002" Shift="0.021045381128994466"/>
+		<Detector Gain="1" Position="3.9474" Shift="0.02777270513897569"/>
+		<Detector Gain="1" Position="5.2632000000000003" Shift="0.033972264664590857"/>
+		<Detector Gain="1" Position="6.5789999999999988" Shift="0.04031477646103114"/>
+		<Detector Gain="1" Position="7.8948" Shift="0.047625211202526316"/>
+		<Detector Gain="1" Position="9.2105999999999995" Shift="0.053205419829612868"/>
+		<Detector Gain="1" Position="10.526400000000001" Shift="0.060224256361498259"/>
+		<Detector Gain="1" Position="11.842199999999998" Shift="0.066397071137584085"/>
+		<Detector Gain="1" Position="13.157999999999998" Shift="0.07157356745091463"/>
+		<Detector Gain="1" Position="14.473800000000001" Shift="0.078735342269067352"/>
+		<Detector Gain="1" Position="15.7896" Shift="0.086262238567887894"/>
+	</DetectorCalibration>
+</Data>
+
+
+### node data for a single region
+<Data>
+	<TransmissionInfo>
+		<Parameter name="File Path" type="string">C:\\Program Files (x86)\\SPECS\\SpecsLab Prodigy\\database\\TransmissionFunction\\Default\\Default.tf</Parameter>
+		<Parameter name="Description" type="string">Default Transmission Function</Parameter>
+		<Parameter name="Created by" type="string">Dietmar Funnemann</Parameter>
+		<Parameter name="Date" type="string">2013-11-27</Parameter>
+	</TransmissionInfo>
+	
+	<AnalyzerSpectrumParameters AnalysisMethod="XPS" AnalyzerLensMode="MediumMagnification" AnalyzerLensVoltage="3.5kV" AnalyzerSlit="5:7x20\\B:open" BiasVoltage="0" CurvesPerScan="1" DetectorVoltage="1400" DwellTime="0.5" ExcitationEnergy="1486.6099999999999" KineticEnergy="186.6099999999999" KineticEnergyBase="0" PassEnergy="20" ScanDelta="0.5" ScanMode="FixedAnalyzerTransmission" ValuesPerCurve="2611" Workfunction="4.369999885559082"/>
+	<DetectorDisplacementRatio>0</DetectorDisplacementRatio>
+</Data>
+
+
+
+<Context><DeviceContext><DeviceMapping><DeviceInfo DeviceType="XRC1000" UniqueName="XRC1000" VisibleName="XR 50"><ParamInfos/><CommandInfos><CommandInfo Name="Operate"><ParamInfos><ParamInfo><Parameter name="operating_mode" type="enum" values="off|cooling|standby|hvon|operate">off</Parameter></ParamInfo><ParamInfo><Parameter name="anode" type="enum" values="Al|Mg">Al</Parameter></ParamInfo><ParamInfo><Parameter name="uanode" type="double">0</Parameter><Readable name="Voltage" type="quantity">0.001 kV</Readable></ParamInfo><ParamInfo><Parameter name="iemission" type="double">0</Parameter><Readable name="Emission" type="quantity">1000 mA</Readable></ParamInfo><ParamInfo><Parameter name="DeviceExcitationEnergy" type="double">0</Parameter></ParamInfo></ParamInfos></CommandInfo></CommandInfos></DeviceInfo></DeviceMapping></DeviceContext></Context>
