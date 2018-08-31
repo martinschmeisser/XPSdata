@@ -1,6 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # pylint: disable=too-few-public-methods,no-member
+# 
+# martin schmeisser 2018:
+# this is a copy of
+# GitHUB: PyExpLabSys/PyExpLabSys/file_parsers/specs.py 
+# 
+# the Region Class has moved, with slight modifications, to the file RegionBase.py
+# and now works for SpecsXML files and SpecsSLE files
+# 
 
 """This file is used to parse XPS and ISS data from XML files from the
 SPECS program.
